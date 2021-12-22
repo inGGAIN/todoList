@@ -7,7 +7,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-const TodoLists = ({ todos, deleteTodo }) => (
+const TodoLists = ({ todos=[], deleteTodo=() =>{} }) => (
   <List>
     {todos.map((todo, index) => (
       <ListItem key={index.toString()} dense button>
@@ -25,7 +25,6 @@ const TodoLists = ({ todos, deleteTodo }) => (
         </ListItemSecondaryAction>
       </ListItem>
     ))}
-    console.log(todos.map)
   </List>
 );
 
